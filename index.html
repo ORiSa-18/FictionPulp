@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="Images/Background.png" alt="CineSuggest" style="height: 80px;">
+    </header>
+
+    <div class="container">
+        <label for="movieInput">Enter your favorite movie:</label>
+        <input type="text" id="movieInput" placeholder="E.g., The Shawshank Redemption">
+
+        <div class="optional-section">
+            <label for="addMoreMovies" id="addMoreMovies">Add more movies (up to 5)</label>
+            <ul id="movieList">
+                <!-- Optional -->
+            </ul>
+        </div>
+
+        <div id="movieImages">
+            <!-- Movie images to be added here -->
+        </div>
+
+        <button id="getRecommendations">Get Recommendations</button>
+
+        <div id="recommendations">
+            <!-- Recommendations to be added here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
