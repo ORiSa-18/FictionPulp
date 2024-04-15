@@ -44,28 +44,23 @@ document.addEventListener('DOMContentLoaded', function () {
         const userMovies = Array.from(document.querySelectorAll('#movieList input[type="text"]'))
             .map(input => input.value.trim());
 
-        
+
         const recommendations = getRecommendations(userMovies);
 
-        
+
         recommendationsContainer.innerHTML = `<h2>Recommended Movies:</h2>`;
         recommendations.forEach(movie => {
             recommendationsContainer.innerHTML += `<p>${movie}</p>`;
         });
     });
 
-    // Simulate recommendation logic
     function getRecommendations(userMovies) {
-        // to be replaced it with actual recommendation logic
         const allMovies = [
-            'Inception', 'The Dark Knight', 'Interstellar', 'The Shawshank Redemption', 'Pulp Fiction',
-            'Fight Club', 'The Godfather', 'The Matrix', 'Forrest Gump', 'Titanic'
+            'Hera Pheri', 'Khiladi 786', 'Phir Hera Pheri', 'Hulchul'
         ];
 
-        // Filter out movies already entered by the user
         const availableMovies = allMovies.filter(movie => !userMovies.includes(movie));
 
-        // Return a subset of available movies as recommendations
-        return availableMovies.slice(0, 3); // Return the first 3 movies as recommendations
+        return availableMovies.slice(0, 3); 
     }
 });
